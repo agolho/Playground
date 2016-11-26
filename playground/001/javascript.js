@@ -1,11 +1,13 @@
 var i=getCookie("ccount");
 
+window.onload = function(){checkifEmpty();};
 $("#clicker").click(function(e){
   e.preventDefault();
   clicked();
 });
 
 function checkifEmpty(){
+  $("#game .text").html('<img src="loader.gif"></img>');
   if (i == 0)
     {
         console.log("empty");
