@@ -9,5 +9,6 @@ Right now it has;
  The Cookie watching simple javascript app-ish thingy. Will build on that in future
 ##002
   Again something to do with cookies, but this one is more of a code-clipboard-test-thingy.
-  
+##003
+ Ecology Simulator!
 Email me at agolho@gmail.com
