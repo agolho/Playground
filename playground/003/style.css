@@ -1,31 +1,10 @@
-div{
-  margin:20px;
-}
-.text{
-  height:250px;
-}
-body{
+.row{
   padding:20px;
 }
 
-.text-center{
-  text-align: center;
-  margin:auto;
+.highcol{
+  height:200px;
 }
-.btn{
-  height:100px;
-  width: 500px;
-  text-align: center;
-}
-.container {
-text-align: center;
-}
-
-.center-element {
-width: 100px;
-text-align: left;
-}
-h3{
-  color:red
-  text-align: center;
+.right{
+  text-align: right;
 }

@@ -1,43 +1,59 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Playground Project 003</title>
+    <title>ECOSIM v0.1 ALPHA</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- Bootstrap Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
 </head>
 <body >
-  <container>
-    <text>This is an ecology simulator. It's very much in Work In Progress right now so it will be complete when it will be complete.
-    <small>I love ecological equilibilirums. They give me joy for some reason. So I am building this simle code. If you want to help me you can tweet at me: <a href="https://twitter.com/ysfbekts">@ysfbekts</a></small></text><br><br>
-  </container>
-    <container id="sim">
-      <div class="turncnt text-center">
-        Turn: 0 <br>
-        Oxygen: ~ <br>
-        Water: ~ <br>
-        Carbondioxide: ~ <br>
-      </div>
-      <div>
-        <a class="plants text-center">None, there are no plants.</a><br>
-        <button class="btn-warning" id="addplant">Add Plant</button>
-      </div>
-        <div>
-          <a class="mamals text-center">None, there are no mamals.</a><br>
-          <button class="btn-warning" id="addmamal">Add Mamal</button>
-        <div>
-      <div>
-        <center>
-          <button class="btn btn-info" id="nextturn"><strong>Next Turn</strong></button>
-        </center>
-      </div>
-      <div class="plantwarn"></div>
-      <div class="mamalwarn"></div>
-    </container>
+	<div class="container-fluid" id="sim">
+	<div class="row">
+		<div class="col-md-8">
+
+			<button type="button" class="nextturn btn highcol btn-lg btn-primary btn-block" id="nextturn">
+				Next Turn
+			</button>
+		</div>
+		<div class="col-md-4">
+			<h2>
+				ECOSIM v0.1 ALPHA
+			</h2>
+			<p>
+				This is an ecology simulator. It's very much in Work In Progress right now so it will be complete when it will be complete.
+		    <small>I love ecological equilibilirums. They give me joy for some reason. So I am building this simle code. If you want to help me you can tweet at me:
+			<p>
+				<a class="btn pull-right" href="https://twitter.com/ysfbekts">@ysfbekts</a>
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="jumbotron turncnt center">
+
+			</div>
+			<div class="row">
+				<div class="col-md-2">
+
+					<button type="button" id="addplant" class="plantbtn btn btn-block btn-success btn-lg">
+						<i class="fa fa-leaf"></i> Add Plant <span class="badge">0</span>
+					</button>
+				</div>
+				<div class="col-md-2">
+
+					<button type="button" id="addmamal" class="mamalbtn btn btn-block btn-lg btn-info">
+					<i class="fa fa-paw"></i> Add Mamal <span class="badge">0</span>
+					</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
 
 </body>
 <script src="jquery-3.1.1.min.js" type="text/javascript"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="js.js" type="text/javascript"></script>
-
 </html>
