@@ -10,7 +10,7 @@ $("#tweet").on("click", function(){
 */
 function genQuote () {
     $.ajax({
-      url: "http://api.icndb.com/jokes/random",
+      url: "https://crosslink.me/http://api.icndb.com/jokes/random",
       jsonp: "callback",
       type: "GET",
       dataType: "jsonp",
