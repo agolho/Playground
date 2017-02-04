@@ -1,3 +1,45 @@
-.jumbotron {
-  text-align:center;
+body {
+    font-family: monospace;
+    max-width: 50em;
+    margin:0 auto;
+    background-color: tomato;
+    background: url("chuck.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.btn-danger {
+  background-color: black;
+  color:white;
+}
+.jumbotron{
+  opacity: 0.9;
+  text-align: center;
+  vertical-align: middle;
+  padding:2em;
+  box-shadow: 2px 2px 15px ;
+  margin-top:50%;
+}
+.quote{
+    height: 5em;
+}
+h1{
+  opacity: 0.5;
+}
+.text-shadow{
+  text-shadow: 1px 1px 4px;
+}
+.container {
+   position: relative;
+}
+
+.background {
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   z-index: -1;
+   overflow: hidden;
 }

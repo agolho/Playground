@@ -1,20 +1,32 @@
+var str;
 $("#buton").on("click", function(){
   genQuote();
 });
-function genQuote(){
-  $.ajax({
+/*
+$("#tweet").on("click", function(){
+  tweet();
+});
+*/
+function genQuote () {
+    $.ajax({
+      url: "http://api.icndb.com/jokes/random",
+      jsonp: "callback",
       type: "GET",
-      url: "test.json",
       dataType: "jsonp",
-      success: readData,
-      error: function (xhr, ajaxOptions, thrownError) {
-        alert(xhr.status);
-        alert(thrownError);
+      success: function (data) {
+        str=data["value"]["joke"];
+        prepareTweet(str);
+        $(".quote").html(data["value"]["joke"]);
+      },
+      xhrFields: {
+        withCredentials: false
       }
-  })
-}
-function readData(string){
-  return JSON.stringify(string);
+    });
+  };
+function prepareTweet(foo){
+  var appendLink = 'https://twitter.com/intent/tweet?hashtags=quotes&related=ysfbekts&text='+encodeURIComponent(foo)+" @ysfbekts";
+  var buttonCon='<a href="' + appendLink +'" target="_blank" class="btn btn-lg btn-info btn-block"><i class="fa fa-twitter"></i> Tweet!</a>';
+  $(".conTweet").html(buttonCon);
 }
 
 /* HOW THEY DIT IT
