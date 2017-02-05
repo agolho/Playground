@@ -28,9 +28,12 @@ $("#switchCF").click(function(foo){
       $(".digitizer").html(tempInC+"° C");
     }
 });
+$("#help").click(function(){
+  $(".helpText").html('<p class="slab">Hey, you might have to let unsecured (http) scripts to run.<br />I don\'t like the way modern browsers handle this either. <br /><b>It\'s the little shield icon at the end of your address bar.</b></p>');
+});
 function goldenFleece(){
   $.ajax({
-    url: "api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=675db0be748b9a901ec9d959d70d468e",
+    url: "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=675db0be748b9a901ec9d959d70d468e",
     jsonp: "callback",
     type: "GET",
     dataType: "jsonp",
