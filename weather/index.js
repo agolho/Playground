@@ -20,7 +20,7 @@ $("#switchCF").click(function(foo){
     tempInF = (9/5*(tempInC)+32).toFixed(1);
     if (standard=="C"){
       standard="F";
-    
+
       $(".digitizer").html(tempInF +"° F");
     } else if (standard=="F") {
       standard="C";
@@ -30,7 +30,7 @@ $("#switchCF").click(function(foo){
 });
 function goldenFleece(){
   $.ajax({
-    url: "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=675db0be748b9a901ec9d959d70d468e",
+    url: "https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=675db0be748b9a901ec9d959d70d468e",
     jsonp: "callback",
     type: "GET",
     dataType: "jsonp",
