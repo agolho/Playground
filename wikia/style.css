@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+html, body {
+  max-width: 90em;
+  height: 100%;
+    font-family: "Roboto Condensed",sans-serif;
+}
+html {
+    display: table;
+    margin:2em auto;
+}
+body {
+    display: table-cell;
+    vertical-align: middle;
+    background: url("background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.result {
+  background: white;
+  color: white;
+  border-style:solid;
+  border-width: 0px 0px 0px 10px;
+  padding: 1em;
+  margin-top: 1em;
+}
+.btn-default {
+  border-radius: 0px;
+}
+.btn-info {
+  background: rgba(45, 45, 25, 1);
+  border-color:rgba(45, 45, 25, 1);
+  border-radius: 0px;
+}
+.btn-info:hover {
+  background: gold;
+  border-color:rgba(45, 45, 25, 1);
+}
+.btn.active, .btn:active {
+    background: gold !important;
+}
+.btn-info:active {
+  background-color: gold !important;
+}
+.parent {
+    position: relative;
+}
+.userInput {
+  border-radius: 0px;
+  -webkit-appearance: textfield;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  user-select: text;
+  cursor: auto;
+}
+.result:hover {
+  border-color: gold;
+}
+a {
+  color: tan;
+}
+a:hover {
+  color: gold;
+  text-decoration: none;
+}

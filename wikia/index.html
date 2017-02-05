@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Seeking Owl</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="row form-group">
+    <form>
+    <div class="col-md-12">
+      <input id="userInput" class="input userInput input-lg form-control" placeholder="Search Encyclopedically."></input>
+
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <button id="search" type="submit" class="form-control  btn btn-block  btn-info">Search <i class="fa fa-search"></i></button>
+      </div>
+      <div class="col-md-6"><a href="https://en.wikipedia.org/wiki/Special:Random"class="btn btn-block btn-default">Random <i class="fa fa-random"></i></a></div>
+    </div>
+    <p style="color:gold;" class="powered text-center">Powered by Wikipedia.</p>
+    </form>
+
+
+  <h1 id="title"></h1>
+  <div id="queryResults">
+</div>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
