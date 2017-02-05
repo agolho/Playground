@@ -1,0 +1,44 @@
+/*
+body {
+  max-width: 50em;
+  margin:0 auto;
+  text-align: center;
+}
+*/
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Lobster');
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+html, body {
+    height: 100%;
+    max-width: 50em;
+    margin:0 auto;
+    text-align: center;
+    background: url("background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.main {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+.wrapper {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
+.lobster {
+  font-family: "Lobster", cursive;
+}
+.slab {
+  font-family: "Josefin Slab",serif;
+}
