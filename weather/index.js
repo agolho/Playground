@@ -30,7 +30,7 @@ $("#switchCF").click(function(foo){
 });
 function goldenFleece(){
   $.ajax({
-    url: "https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=675db0be748b9a901ec9d959d70d468e",
+    url: "api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=675db0be748b9a901ec9d959d70d468e",
     jsonp: "callback",
     type: "GET",
     dataType: "jsonp",
