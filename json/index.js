@@ -20,7 +20,7 @@ function genQuote () {
     });
   };
 function prepareTweet(foo){
-  var appendLink = 'https://twitter.com/intent/tweet?hashtags=quotes&related=ysfbekts&text='+encodeURIComponent(foo)+" @ysfbekts";
+  var appendLink = 'https://twitter.com/intent/tweet?hashtags=chucknorrisfacts&related=ysfbekts&text='+encodeURIComponent(foo)+" @ysfbekts";
   var buttonCon='<a href="' + appendLink +'" target="_blank" class="btn btn-lg btn-info btn-block"><i class="fa fa-twitter"></i> Tweet!</a>';
   $(".conTweet").html(buttonCon);
   setTimeout(func, 1000);
