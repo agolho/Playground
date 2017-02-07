@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Open+Sans+Condensed:300');
+body {
+    background-color: tomato;
+    background: url("chuck.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display:flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+.quoteWrapper{
+  min-height: 10em;
+}
+.buttons{
+  font-family: "Open Sans Condensed",sans-serif;
+}
+.quote {
+  font-family: "Cinzel",serif;
+  background-color: #efefef;
+  border-radius: 20px;
+  opacity: 0.9;
+  min-height: 20em;
+  min-width: 20em;
+  max-width: 30em;
+  padding: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.conTweet{
+  
+}
+.bottom{
+  font-family: "Open Sans Condensed",sans-serif;
+  order: 5;
+  border-radius: 20px;
+  opacity: 0.9;
+  background-color: #efefef;
+  padding:1em;
+}

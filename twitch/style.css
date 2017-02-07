@@ -1,0 +1,28 @@
+
+.container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+
+  justify-content: space-between;
+  -ms-box-orient: horizontal;
+}
+.item {
+ flex:1;
+}
+.first{
+  order:0;
+}
+.reOrder {
+  flex-flow:column wrap ;
+}
+.streamItem{
+  background-color: #efefef;
+}
+.streamItemOff{
+  color:dimgray;
+  order:42;
+}
