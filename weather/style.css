@@ -42,3 +42,7 @@ html, body {
 .slab {
   font-family: "Josefin Slab",serif;
 }
+img {
+    display: block;
+    margin: auto;
+}

@@ -1,5 +1,6 @@
 var lat=0,lon=0;
 var tempInK=0,tempInF=0,tempInC=0;
+var accuId=0;
 var standard="C";
   // Get Permission, because consent is important.
 if (navigator.geolocation) {
@@ -7,70 +8,74 @@ if (navigator.geolocation) {
     lat=position.coords.latitude;
     lon=position.coords.longitude;
     $("#data").html("latitude: " +lat + "<br>longitude: " + lon);
-    goldenFleece();
+    getAccuId();
   });
 }
+$("#getLocation").click(function(){
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      lat=position.coords.latitude;
+      lon=position.coords.longitude;
+      $("#data").html("latitude: " +lat + "<br>longitude: " + lon);
+      getAccuId();
+    });
+  }
+});
 $("#getWeather").click(function(){
   if(lat!=0 | lon!=0){
-    goldenFleece();
+    getAccuId();
   } else alert("Didn't went through.");
 });
 $("#switchCF").click(function(foo){
-    tempInC = (tempInK- 273.15).toFixed(1);
-    tempInF = (9/5*(tempInC)+32).toFixed(1);
     if (standard=="C"){
       standard="F";
-
-      $(".digitizer").html(tempInF +"° F");
+      $(".digitizer").html(tempInF +" F");
     } else if (standard=="F") {
       standard="C";
-
-      $(".digitizer").html(tempInC+"° C");
+      $(".digitizer").html(tempInC+" C");
     }
 });
 $("#help").click(function(){
-  $(".helpText").html('<p class="slab">Hey, you might have to let unsecured (http) scripts to run.<br />I don\'t like the way modern browsers handle this either. <br /><b>It\'s the little shield icon at the end of your address bar.</b></p>');
+  $(".helpText").html('<p class="slab">Developed by <a href="https://twitter.com/ysfbekts">@ysfbekts</a></p><p class="slab">Data from AccuWeather.</p>');
 });
-function goldenFleece(){
+function getAccuId(){
   $.ajax({
-    url: "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=675db0be748b9a901ec9d959d70d468e",
+    url: "https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=JdvSUjZ9AvUdgE1Q2CSZWsFtWbQJbge5&q="+lat+'%2C'+lon+'&language=tr-TR',
     jsonp: "callback",
     type: "GET",
     dataType: "jsonp",
     success: function (data) {
-      tempInK = data["main"]["temp"];
-      tempInC = (tempInK- 273.15).toFixed(1);
-      $(".digitizer").html(tempInC + "° C");
-      $(".cityName").html(data["name"]);
-      $(".weatherSit").html(data["weather"][0]["main"]);
-      signalization(data["weather"][0]["main"]);
-      $(".country").html(getCountryName(data["sys"]["country"]));
+        accuId = data["Key"];
+        $(".cityName").html(data["LocalizedName"]+'  <span id="getLocation"><i class="fa fa-location-arrow"> </i>');
+        $(".country").html(data["Country"]["EnglishName"]);
+        getAccuWeather();
     },
     xhrFields: {
       withCredentials: false
     }
   });
 }
-function signalization(str){
-  if (str=="Rain"){
-    $(".weatherSym").html('<i class="fa fa-tint"></i>');
-  } else if(str=="Thunderstorm"){
-    $(".weatherSym").html('<i class="fa fa-bolt"></i>');
-  } else if(str=="Drizzle"){
-    $(".weatherSym").html('<i class="fa fa-shower"></i>');
-  } else if(str=="Snow"){
-    $(".weatherSym").html('<i class="fa fa-snowflake-o"></i>');
-  } else if(str=="Atmosphere"){
-    $(".weatherSym").html('<i class="fa fa-bars"></i>');
-  } else if(str=="Clear"){
-    $(".weatherSym").html('<i class="fa fa-sun-o"></i>');
-  } else if(str=="Clouds"){
-    $(".weatherSym").html('<i class="fa fa-cloud"></i>');
-  } else if(str=="Extreme"){
-    $(".weatherSym").html('<i class="fa fa-thermometer-empty"></i>');
-  } else if(str=="Additional"){
-    $(".weatherSym").html('<i class="fa fa-cloud"></i>');
-  } else {
-    $(".weatherSym").html('<i class="fa fa-sun-o"></i>');
-  }
+function getAccuWeather(){
+  $.ajax({
+    url: 'https://dataservice.accuweather.com/currentconditions/v1/'+accuId+'?apikey=JdvSUjZ9AvUdgE1Q2CSZWsFtWbQJbge5&language=tr&details=true',
+    jsonp: "callback",
+    type: "GET",
+    dataType: "jsonp",
+    success: function (data) {
+      tempInC = data[0]["Temperature"]["Metric"]["Value"];
+      tempInF = data[0]["Temperature"]["Imperial"]["Value"];
+      windSpeed = data[0]["Wind"]["Speed"]["Metric"]["Value"];
+      windSpeedImp = data[0]["Wind"]["Speed"]["Imperial"]["Value"];
+      windDirection = data[0]["Wind"]["Direction"]["English"];
+      //console.log(data[0]["WeatherText"]);
+      $(".digitizer").html(tempInC + " C");
+      $(".wind").html('<b><i class="fa fa-flag"></i> '+windSpeed +' '+ windDirection+'</b>');
+      $(".weatherSit").html(data[0]["WeatherText"]);
+      $(".weatherSym").html('<img class="img-responsive" src="https://developer.accuweather.com/sites/default/files/'+data[0]["WeatherIcon"]+'-s.png">');
+      $(".visibility").html('Visibility: '+data[0]["Visibility"]["Metric"]["Value"]+data[0]["Visibility"]["Metric"]["Unit"]);
+    },
+    xhrFields: {
+      withCredentials: false
+    }
+  });
 }
