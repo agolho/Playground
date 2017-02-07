@@ -47,7 +47,7 @@ function getAccuId(){
     success: function (data) {
         accuId = data["Key"];
         $(".cityName").html(data["LocalizedName"]+'  <span id="getLocation"><i class="fa fa-location-arrow"> </i>');
-        $(".country").html(data["Country"]["EnglishName"]);
+        $(".country").html('The most beautiful city in '+data["Country"]["EnglishName"]);
         getAccuWeather();
     },
     xhrFields: {
