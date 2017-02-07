@@ -71,11 +71,18 @@ function getAccuWeather(){
       $(".digitizer").html(tempInC + " C");
       $(".wind").html('<b><i class="fa fa-flag"></i> '+windSpeed +' '+ windDirection+'</b>');
       $(".weatherSit").html(data[0]["WeatherText"]);
-      $(".weatherSym").html('<img class="img-responsive" src="https://developer.accuweather.com/sites/default/files/'+data[0]["WeatherIcon"]+'-s.png">');
+      weatherSymbolizer(data[0]["WeatherIcon"]);
       $(".visibility").html('Visibility: '+data[0]["Visibility"]["Metric"]["Value"]+data[0]["Visibility"]["Metric"]["Unit"]);
     },
     xhrFields: {
       withCredentials: false
     }
   });
+}
+function weatherSymbolizer(symbol){
+  if (symbol<10) {
+    $(".weatherSym").html('<img class="img-responsive" src="https://developer.accuweather.com/sites/default/files/0'+symbol+'-s.png">');
+  } else {
+    $(".weatherSym").html('<img class="img-responsive" src="https://developer.accuweather.com/sites/default/files/'+symbol+'-s.png">');
+  }
 }
