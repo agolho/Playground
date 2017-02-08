@@ -2,6 +2,7 @@ var lat=0,lon=0;
 var tempInK=0,tempInF=0,tempInC=0;
 var accuId=0;
 var standard="C";
+var c=document.getElementById("compass");
   // Get Permission, because consent is important.
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
@@ -46,7 +47,7 @@ function getAccuId(){
     dataType: "jsonp",
     success: function (data) {
         accuId = data["Key"];
-        $(".cityName").html(data["LocalizedName"]+'  <span id="getLocation"><i class="fa fa-location-arrow"> </i>');
+        $(".cityName").html(data["LocalizedName"]+'  <i class="fa fa-location-arrow"></i>');
         $(".country").html('The most beautiful city in '+data["Country"]["EnglishName"]);
         getAccuWeather();
     },
@@ -66,13 +67,15 @@ function getAccuWeather(){
       tempInF = data[0]["Temperature"]["Imperial"]["Value"];
       windSpeed = data[0]["Wind"]["Speed"]["Metric"]["Value"];
       windSpeedImp = data[0]["Wind"]["Speed"]["Imperial"]["Value"];
-      windDirection = data[0]["Wind"]["Direction"]["English"];
+      windUnit = data[0]["Wind"]["Speed"]["Metric"]["Unit"];
       //console.log(data[0]["WeatherText"]);
       $(".digitizer").html(tempInC + " C");
-      $(".wind").html('<b><i class="fa fa-flag"></i> '+windSpeed +' '+ windDirection+'</b>');
+      $(".wind").html('<b><i id="compass" class="fa fa-arrow-circle-up"></i> '+windSpeed +' '+ windUnit+'</b>');
       $(".weatherSit").html(data[0]["WeatherText"]);
       weatherSymbolizer(data[0]["WeatherIcon"]);
       $(".visibility").html('Visibility: '+data[0]["Visibility"]["Metric"]["Value"]+data[0]["Visibility"]["Metric"]["Unit"]);
+      var angle= data[0]["Wind"]["Direction"]["Degrees"];
+      compassRotation(angle);
     },
     xhrFields: {
       withCredentials: false
@@ -84,5 +87,35 @@ function weatherSymbolizer(symbol){
     $(".weatherSym").html('<img class="img-responsive" src="https://developer.accuweather.com/sites/default/files/0'+symbol+'-s.png">');
   } else {
     $(".weatherSym").html('<img class="img-responsive" src="https://developer.accuweather.com/sites/default/files/'+symbol+'-s.png">');
+  }
+}
+function compassRotation(angle){
+  if (angle == 0){
+    $("#compass").removeClass();
+    $("#compass").addClass("fa fa-rotate-180 fa-arrow-circle-up");
+  } else if (angle>0 && angle <90) {
+    $("#compass").removeClass();
+    $("#compass").addClass("fa fa-rotate-225 fa-arrow-circle-up");
+  } else if (angle == 90) {
+    $("#compass").removeClass();
+    $("#compass").addClass("fa fa-rotate-270 fa-arrow-circle-up");
+  } else if (angle>90 && angle <180) {
+    $("#compass").removeClass();
+    $("#compass").addClass("fa fa-rotate-315 fa-arrow-circle-up");
+  } else if (angle == 180) {
+    $("#compass").removeClass();
+    $("#compass").addClass("fa fa-arrow-circle-up");
+  } else if (angle>180 && angle <270) {
+    $("#compass").removeClass();
+    $("#compass").addClass("fa fa-rotate-45 fa-arrow-circle-up");
+  } else if (angle == 270) {
+    $("#compass").removeClass();
+    $("#compass").addClass("fa fa-rotate-90 fa-arrow-circle-up");
+  } else if (angle>270 && angle <360) {
+    $("#compass").removeClass();
+    $("#compass").addClass("fa fa-rotate-135 fa-arrow-circle-up");
+  } else {
+    $("#compass").removeClass();
+    $("#compass").addClass("fa fa-arrow-circle-up");
   }
 }
