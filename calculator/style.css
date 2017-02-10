@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono|Iceberg');
+body{
+  margin:2em auto;
+  max-width: 80em;
+  background: url("bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: black;
+
+}
+.flex-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin:0 auto;
+  align-items: center;
+  margin-top:10em;
+}
+.panel{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding:2em;
+}
+.btn-array{
+  margin:2em 0 2em 0;
+}
+.header{
+  font-family: 'Iceberg',monospace;
+  color:goldenrod;
+  text-shadow: 0 0 3px gold;
+  margin:1em;
+}
+.calculator{
+  background-color: dimgray;
+  max-width: 20em;
+  font-size: 16pt;
+}
+.input-lg{
+  margin:1em;
+  font-family: 'Iceberg',monospace;
+  font-size: large;
+  text-align: right;
+  background-color: black;
+  color:#67dbd9;
+  text-shadow: 0 0 3px #9de8e6;
+}
+p{
+  text-align: right;
+  font-size: small;
+  color:#9de8e6;
+  font-family: 'Iceberg',monospace;
+}
+.panel-title{
+  font-family: 'Iceberg',monospace;
+  text-align: right;
+
+}
+.btn{
+  width: 40px;
+  font-family: 'Share Tech Mono',monospace;
+  text-shadow: 0 0 20px black;
+}
+.btn-default{
+  background-color: black;
+  color:white;
+}
+.btn-warning{
+  color:black;
+}
