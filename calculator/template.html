@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>JS Calculator</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="calculator.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="flex-container">
+    <div class="flex-item">
+      <div class="calculator">
+        <div class="brand">
+          <hr />
+          <hr />
+          <hr />
+          <h3 class="brand-title">CSS <span style='font-family:"Iceberg",monospace;margin-left:5em;'>Palmtronic 8M</span></h3>
+        </div>
+        <div class="digitizer" rows="2"><h3 id='display'>0</h3><p id='memory'> 0</p></div>
+        <div class="keypad">
+          <div class="row">
+            <div class="col-xs-3">
+              <button id='clear' class="btn ' btn-fn">C</button>
+            </div>
+            <div class="col-xs-3">
+              <button id='allclear' class="btn btn-fn">AC</button>
+            </div>
+            <div class="col-xs-3">
+              <button class="btn btn-fn"><i class="fa fa-info"></i></button>
+            </div>
+            <div class="col-xs-3">
+              <button class="btn btn-pro">×</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3">
+              <button id='7' class="btn btn-key">7</button>
+            </div>
+            <div class="col-xs-3">
+              <button id='8' class="btn btn-key">8</button>
+            </div>
+            <div class="col-xs-3">
+              <button id='9' class="btn btn-key">9</button>
+            </div>
+            <div class="col-xs-3">
+              <button id='divide' class="btn btn-pro">÷</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3">
+              <button id='6' class="btn btn-key">6</button>
+            </div>
+            <div class="col-xs-3">
+              <button id='5' class="btn btn-key">5</button>
+            </div>
+            <div class="col-xs-3">
+              <button id='4' class="btn btn-key">4</button>
+            </div>
+            <div class="col-xs-3">
+              <button id='subtract' class="btn btn-pro">-</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3">
+              <button id='3' class="btn btn-key">3</button>
+            </div>
+            <div class="col-xs-3">
+              <button id='2' class="btn btn-key">2</button>
+            </div>
+            <div class="col-xs-3">
+              <button id='1' class="btn btn-key">1</button>
+            </div>
+            <div class="col-xs-3">
+              <button id='sum' class="btn btn-pro">+</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3">
+              <button id='0' class="btn btn-key">0</button>
+            </div>
+            <div class="col-xs-3">
+              <button id='point' class="btn btn-key">.</button>
+            </div>
+            <div class="col-xs-3">
+              <button id='percent' class="btn btn-key">%</button>
+            </div>
+            <div class="col-xs-3">
+              <button id='calculate' class="btn btn-pro">=</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="lazy.js"></script>
+</body>
+</html>

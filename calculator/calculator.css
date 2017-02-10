@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono|Iceberg|Sansita');
+body{
+  margin:0 auto;
+  background: url("bg2.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.flex-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.flex-item{
+  background-color: #000;
+}
+.calculator{
+  display: block;
+  box-shadow: 0 0 30px black;
+  margin:2px;
+}
+.digitizer{
+  background-color: black;
+  color:#67dbd9;
+  text-shadow: 0 0 3px #9de8e6;
+  box-shadow: 0 0 10px #9de8e6;
+  font-family: 'Iceberg',monospace;
+  text-align: right;
+  margin:1em;
+  padding: 0 2em 0 2em;
+  width: 25em;
+  max-height: 7em;
+  border-radius: 10px;
+  border: 2px solid black;
+  display: block;
+}
+.brand{
+  padding: 1em;
+  background-color: black;
+  color:goldenrod;
+  text-align: justify;
+}
+.brand-title{
+  padding-left: 1em;
+  box-shadow: 0 0 5px 2px gray inset;
+  font-family: 'Sansita',serif;
+}
+.keypad{
+  display: block;
+  padding:2em;
+  background: url("aluminium.jpg") no-repeat center center fixed;
+}
+.btn{
+  width: 3em;
+  box-shadow: 0 1px 2px 2px gray;
+  border-radius:5px;
+  font-family: 'Share Tech Mono',monospace;
+  font-size:large;
+}
+.btn-fn{
+  background-color: #fcdd45;
+  color:black;
+}
+.btn-pro{
+  background-color: #397693;
+  color:white;
+}
+.btn-key{
+  background-color: #4c4d47;
+  color:white;
+}
+.row{
+  padding:1em 0 1em 0;
+}
+p{
+  display: block;
+}
+hr{
+  background-color: gray;
+  background: gray;
+}

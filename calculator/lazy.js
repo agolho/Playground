@@ -18,14 +18,16 @@ $("#divide").click(function(){if(!process)writeToDisplay(' / ');process=true;ove
 $("#allclear").click(function(){
   toDisplay ='';
   total=0;writeToDisplay('0');
+  $('#display').html('0');
   });
 $("#clear").click(function(){
   toDisplay ='';
   total=0;writeToDisplay('0');
+  $('#display').html('0');
   });
 function writeToDisplay(num){
     toDisplay += num;
-    $('#memory').html('<p>'+ toDisplay +'</p>');
+    $('#memory').html(toDisplay);
 }
 $('#calculate').click(function(){
   var opp = [];
@@ -60,5 +62,5 @@ $('#calculate').click(function(){
   writeToDisplay('=');
   toDisplay ='';
   process=true;
-  document.getElementById('display').value = +total.toFixed(2);
+  $('#display').html(+total.toFixed(2));
 });
