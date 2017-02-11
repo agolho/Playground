@@ -33,6 +33,9 @@ body{
   min-width: 4em;
   font-family: 'Oswald',monospace;
 }
+.clock{
+  margin-top:2em;
+}
 .timer{
   padding: 1em;
   text-align: center;
