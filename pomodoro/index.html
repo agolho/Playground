@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Pomodoro Clock</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body id='bg'>
+  <div class="flex-container">
+    <div id='app' class='app'>
+    <div class="controls">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Break Length</h5>
+          <div class="btn-group" role="group" aria-label="...">
+            <button id='breakMinus' type="button" class="btn btn-default">-</button>
+            <button id='breakMark' type="button" class="btn btn-display">5</button>
+            <button id='breakPlus' type="button" class="btn btn-default">+</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5>Study Length</h5>
+          <div class="btn-group" role="group" aria-label="...">
+            <button id='minMinus' type="button" class="btn btn-default">-</button>
+            <button id='minMark' type="button" class="btn btn-display">25</button>
+            <button id='minPlus' type="button" class="btn btn-default">+</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5>Study Cycle</h5>
+          <div class="btn-group" role="group" aria-label="...">
+            <button id='studyMinus' type="button" class="btn btn-default">-</button>
+            <button id='studyMark' type="button" class="btn btn-display">4</button>
+            <button id='studyPlus' type="button" class="btn btn-default">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='start'class='timer'>
+      <div class="clock">
+        <h1 id='digits' class="digits">25:00</h1>
+        <p id='status'>Tomato Timer· Press Here To Begin</p>
+      </div>
+    </div>
+  </div>
+  <div id="about" class='about'>
+    <i class='fa fa-info'></i>
+  </div>
+    </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

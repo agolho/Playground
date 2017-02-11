@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed|Oswald');
+body{
+  margin: 0 auto;
+  max-width: 50em;
+  font-family: 'Open Sans Condensed',sans-serif;
+  background: url("bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.flex-container{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+}
+.controls{
+  background: seashell;
+  text-align: center;
+  padding:2em;
+  border-radius: 20px;
+  color:black;
+  display: block;
+  box-shadow: 0 2px 2px gray;
+}
+.btn{
+  background-color: orangered !important;
+  color:white;
+}
+.btn-display{
+  pointer-events: none;
+  min-width: 4em;
+  font-family: 'Oswald',monospace;
+}
+.timer{
+  padding: 5em;
+  text-align: center;
+  display: block;
+  font-family: 'Oswald',monospace;
+}
+.about{
+  padding: 1em;
+  margin-top:2em;
+  background-color: #f7f7f7;
+  box-shadow: 0 0 5px black;
+  border-radius: 20px;
+  color:black;
+  text-align: center;
+  font-family: 'Open Sans Condensed',sans-serif;
+}
+.fa-info, a{
+  color:tomato;
+}
+.app{
+  background-color: tomato;
+  border-radius: 20px;
+  box-shadow: 0 0 5px black;
+  color:white;
+}
+.row{
+  margin: 2px 0 2px 0;
+}
+.green{
+  background-color: springgreen;
+}
+.yellow{
+  background-color: skyblue;
+}
+.red{
+  background-color: crimson;
+}
