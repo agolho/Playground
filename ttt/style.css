@@ -29,6 +29,9 @@ body{
   vertical-align: center;
   box-shadow: 0 0 15px #424242;
 }
+.down{
+  margin-top:5em;
+}
 
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */

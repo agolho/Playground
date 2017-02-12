@@ -15,7 +15,7 @@ if (!isGameOver){
 function gameOver(){
   isGameOver=true;
   $('#gameBoard').addClass('invisible');
-  $('#header').addClass('animated pulse');
+  $('#header').addClass('animated pulse down');
   setTimeout(function() {gameReset();}, 1000);
 }
 function gameReset(){
@@ -24,7 +24,7 @@ function gameReset(){
   osturn=false;
   turn=0;
   $('#gameBoard').removeClass('invisible');
-  $('#header').removeClass('animated pulse');
+  $('#header').removeClass('animated pulse down');
   $('#header').html('Tic - Tac - Toe');
   for(i=0;i<4;i++){
     $('#a'+i).html('');
