@@ -1,14 +1,37 @@
-$('#a1').click(function(){boxInput('a1')});
-$('#a2').click(function(){boxInput('a2')});
-$('#a3').click(function(){boxInput('a3')});
-$('#b1').click(function(){boxInput('b1')});
-$('#b2').click(function(){boxInput('b2')});
-$('#b3').click(function(){boxInput('b3')});
-$('#c1').click(function(){boxInput('c1')});
-$('#c2').click(function(){boxInput('c2')});
-$('#c3').click(function(){boxInput('c3')});
-
 var osturn,isGameOver,boxes=[],turn=0;
+
+if (!isGameOver){
+  $('#a1').click(function(){boxInput('a1')});
+  $('#a2').click(function(){boxInput('a2')});
+  $('#a3').click(function(){boxInput('a3')});
+  $('#b1').click(function(){boxInput('b1')});
+  $('#b2').click(function(){boxInput('b2')});
+  $('#b3').click(function(){boxInput('b3')});
+  $('#c1').click(function(){boxInput('c1')});
+  $('#c2').click(function(){boxInput('c2')});
+  $('#c3').click(function(){boxInput('c3')});
+}
+
+function gameOver(){
+  isGameOver=true;
+  $('#gameBoard').addClass('invisible');
+  $('#header').addClass('animated pulse');
+  setTimeout(function() {gameReset();}, 1000);
+}
+function gameReset(){
+  boxes=[];
+  isGameOver=false;
+  osturn=false;
+  turn=0;
+  $('#gameBoard').removeClass('invisible');
+  $('#header').removeClass('animated pulse');
+  $('#header').html('Tic - Tac - Toe');
+  for(i=0;i<4;i++){
+    $('#a'+i).html('');
+    $('#b'+i).html('');
+    $('#c'+i).html('');
+  }
+}
 function boxInput(box){
   if ($('#'+box).text() !== 'O' && $('#'+box).text() !== 'X'){
     if (osturn){
@@ -62,8 +85,6 @@ function didWin(box){
 
   if( turn==9 && !isGameOver){
     $('#header').html('Draw.');
+    gameOver();
   }
-}
-function gameOver(){
-  isGameOver=true;
 }
