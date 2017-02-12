@@ -8,7 +8,6 @@ body{
   height: 80vh;
   justify-content: center;
   align-items: center;
-  background-color: tomato;
 }
 .gameBoard{
   display: block;
@@ -24,7 +23,7 @@ body{
   justify-content: center;
   align-items: center;
   background-color: #424242;
-  color:tomato;
+  color:#e4e4e4;
   font-size: xx-large;
   text-align: center;
   vertical-align: center;
