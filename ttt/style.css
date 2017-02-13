@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Ubuntu');
 body{
   margin:0 auto;
   max-width: 50em;
 }
+h1{
+  font-family: "Ubuntu",sans-serif;
+}
 .flex-container{
   display: flex;
-  height: 80vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   flex-flow:column wrap;
