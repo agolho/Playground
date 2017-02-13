@@ -25,6 +25,11 @@ $("#clear").click(function(){
   total=0;$('#memory').html('0');
   $('#display').html('0');
   });
+$("#info").click(function(){
+  toDisplay ='';
+  total=0;$('#memory').html('0');
+  $('#memory').html('@ysfbekts');
+  });
 function writeToDisplay(num){
       toDisplay += num;
       $('#memory').html(toDisplay);
