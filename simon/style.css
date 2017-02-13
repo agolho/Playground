@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Ubuntu');
+body{
+  margin:0 auto;
+  max-width: 50em;
+}
+.flex-container{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.simonLead{
+  display: block;
+}
+.btn-group{
+  margin:2em;
+}
+.digit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  width: 9em;
+  background-color: black;
+  border-radius: 20px;
+  font-size: xx-large;
+  color:crimson;
+  text-shadow: 0 0 3px red;
+}
+.gameButton{
+  width: 5em;
+  height: 3em;
+}
+.highlighted{
+  opacity: 0.5;
+}
+.red{
+  color:crimson;
+}
+.reded{
+  background-color: #E52F59;
+}
+.flex-item{
+  margin: 1em;
+  border-radius: 10px;
+  box-shadow: 0 0 13px gray;
+  display: block;
+  width: 9em;
+  height: 7em;
+}
+.green{
+  background-color: #6DDA2C;
+}
+.yellow{
+  background-color: #F9B333;
+}
+.blue{
+  background-color: #2E58A6;
+}
