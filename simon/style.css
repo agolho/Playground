@@ -14,7 +14,7 @@ body{
   display: block;
 }
 .btn-group{
-  margin:2em;
+  margin:1em;
 }
 .digit{
   display: flex;
@@ -27,6 +27,7 @@ body{
   font-size: xx-large;
   color:crimson;
   text-shadow: 0 0 3px red;
+  margin-bottom:0.5em;
 }
 .gameButton{
   width: 5em;
@@ -39,26 +40,44 @@ body{
   color:crimson;
 }
 .flex-item{
-  margin: 1em;
+  margin: 0.1em;
   border-radius: 0px;
-  box-shadow: 0 0 13px gray;
+  box-shadow: 0 0 5px gray;
   display: block;
   width: 9em;
   height: 7em;
 }
 .reded{
   background-color: #E52F59;
+  /*
   box-shadow: 0 0 13px crimson;
+  */
+
 }
 .green{
   background-color: #6DDA2C;
+  /*
   box-shadow: 0 0 13px green;
+  */
+
 }
 .yellow{
   background-color: #F9B333;
+  /*
   box-shadow: 0 0 13px orangered;
+  */
+
 }
 .blue{
+  /*
   box-shadow: 0 0 13px skyblue;
+  */
+
   background-color: #2E58A6;
+}
+@media (max-width: 320px) {
+.tooSmall{
+  width: 7em;
+  height: 6em;
+  }
 }
