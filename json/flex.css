@@ -6,11 +6,13 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    display:flex;
-    height:100vh;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column wrap;
+}
+.flex-container{
+  display:flex;
+  height:100vh;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
 }
 .quoteWrapper{
   min-height: 10em;
@@ -33,13 +35,25 @@ body {
   align-items: center;
 }
 .conTweet{
-  
+
 }
 .bottom{
+  margin-top: 1em;
   font-family: "Open Sans Condensed",sans-serif;
   order: 5;
   border-radius: 20px;
   opacity: 0.9;
   background-color: #efefef;
   padding:1em;
+}
+@media (max-height: 500px) {
+.tooSmall{
+  display: none;
+  }
+}
+@media (max-height: 500px) {
+.fitQuote{
+  min-height: 10em;
+  min-width: 10em;
+  }
 }
