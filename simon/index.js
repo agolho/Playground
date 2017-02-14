@@ -59,7 +59,7 @@ function userPress(input){
         message('**');
         startGame();
       }
-      setTimeout(function(){nextTurn();},250);
+      setTimeout(function(){nextTurn();},1000);
     };
   } else if(isStrict){
     message('!!');
@@ -86,7 +86,7 @@ function pressButtons() {
       return;
     }
     nextBtn();
-  }, 1500);
+  }, 1000);
 }
 
 function beepBoop(color){
@@ -128,7 +128,7 @@ function highligher(buttonName){
   $('#'+buttonName).addClass('highlighted');
   setTimeout(function() {
     $('#'+buttonName).removeClass('highlighted');
-  },1000);
+  },500);
 }
 //Animate Css Function
 $.fn.extend({

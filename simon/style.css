@@ -8,7 +8,7 @@ body{
   height: 100vh;
   justify-content: center;
   align-items: center;
-  flex-flow: column wrap;
+  flex-flow: column ;
 }
 .simonLead{
   display: block;
@@ -38,23 +38,27 @@ body{
 .red{
   color:crimson;
 }
-.reded{
-  background-color: #E52F59;
-}
 .flex-item{
   margin: 1em;
-  border-radius: 10px;
+  border-radius: 0px;
   box-shadow: 0 0 13px gray;
   display: block;
   width: 9em;
   height: 7em;
 }
+.reded{
+  background-color: #E52F59;
+  box-shadow: 0 0 13px crimson;
+}
 .green{
   background-color: #6DDA2C;
+  box-shadow: 0 0 13px green;
 }
 .yellow{
   background-color: #F9B333;
+  box-shadow: 0 0 13px orangered;
 }
 .blue{
+  box-shadow: 0 0 13px skyblue;
   background-color: #2E58A6;
 }

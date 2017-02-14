@@ -3,38 +3,38 @@
 <head>
   <title>Simon Game</title>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
   <link href="style.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
-  <div class="flex-container">
-    <div class="controls">
-        <div class="btn-group" role="group" aria-label="...">
-          <button id="onOff" type="button" class="btn btn-default">On · Off</button>
-          <button id="start" type="button" class="btn btn-default">Start</button>
-          <button id="strict" type="button" class="btn btn-default">Strict <i class="fa fa-circle"></i></button>
+    <div class="flex-container">
+      <div class="controls">
+          <div class="btn-group" role="group" aria-label="...">
+            <button id="onOff" type="button" class="btn btn-default">On · Off</button>
+            <button id="start" type="button" class="btn btn-default">Start</button>
+            <button id="strict" type="button" class="btn btn-default">Strict <i class="fa fa-circle"></i></button>
+          </div>
+        </div>
+        <div class="digit">
+          <h2 id="display"></h2>
+        </div>
+        <div class="row">
+          <div id="red" class="reded flex-item col-xs-6"></div>
+          <div id="green" class="green flex-item col-xs-6"></div>
+        </div>
+        <div class="row">
+          <div id="yellow" class="yellow flex-item col-xs-6"></div>
+          <div id="blue" class="blue flex-item col-xs-6"></div>
         </div>
       </div>
-      <div class="digit">
-        <h2 id="display"></h2>
-      </div>
-      <div class="row">
-        <div id="red" class="reded flex-item col-xs-6"></div>
-        <div id="green" class="green flex-item col-xs-6"></div>
-      </div>
-      <div class="row">
-        <div id="yellow" class="yellow flex-item col-xs-6"></div>
-        <div id="blue" class="blue flex-item col-xs-6"></div>
-      </div>
-    </div>
 
-<audio id="sound1" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
-<audio id="sound2" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
-<audio id="sound3" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>
-<audio id="sound4" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></audio>
+  <audio id="sound1" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
+  <audio id="sound2" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
+  <audio id="sound3" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>
+  <audio id="sound4" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></audio>
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="index.js"></script>
