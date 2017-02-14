@@ -16,7 +16,7 @@ $("#search").click(function(){
     return;
   } else {
     $(".powered").addClass("invisible");
-    $(".form-group").animateCss("fadeInUp");
+    $(".result").animateCss("fadeInUp");
     getAndInterpret(searchStr);
   }
 
@@ -55,11 +55,3 @@ $.fn.extend({
         });
     }
 });
-/*
-for (var pageId in data["query"]["pages"]) {
-  if (data["query"]["pages"].hasOwnProperty(pageId)) {
-      var page = data["query"]["pages"][pageId]["revisions"][0]["*"];
-
-      }
-    }
-*/
