@@ -1,0 +1,19 @@
+body{
+  margin: 0 auto;
+  max-width: 50em;
+  font-size: x-large;
+}
+.App{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow:column wrap;
+  height: 100vh;
+}
+textarea{
+  width: 20em;
+  height: 5em;
+}
+h3{
+
+}
