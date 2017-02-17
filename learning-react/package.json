@@ -2,7 +2,7 @@
   "name": "learning-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://agolho.github.io/Playground/react",
+  "homepage": "http://agolho.github.io/Playground/react-markdown",
   "devDependencies": {
     "gh-pages": "^0.12.0",
     "react-scripts": "0.9.0"
