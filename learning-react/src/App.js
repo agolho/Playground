@@ -5,14 +5,14 @@ class App extends Component {
   constructor(props) {
      super(props);
      this.handleChange = this.handleChange.bind(this);
-     this.state = {value: 'Heading \n======= \nSub-heading\n ----------- \n### Another deeper heading\n \n Paragraphs are separated by a blank line. \n Text attributes *italic*, **bold**, `monospace`, ~~strikethrough~~ .'};
+     this.state = {value: 'Heading\n=======\n\nSub-heading\n-----------\n \n### Another deeper heading\n \nParagraphs are separated\nby a blank line.\n\nLeave 2 spaces at the end of a line to do a  \nline break\n\nText attributes *italic*, **bold**, \n`monospace`, ~~strikethrough~~ .\n\nShopping list:\n\n  * apples\n  * oranges\n  * pears\n\nNumbered list:\n\n  1. apples\n  2. oranges\n  3. pears\n\nThe rain---not the reign---in\nSpain.\n\n *[Yusuf Bektas](https://ysfbkts.github.io)*'};
    }
 
    handleChange() {
      this.setState({value: this.refs.textarea.value});
    }
 
-   getRawMarkup() {
+   spitOut() {
      var md = require('marked');
      return { __html: md(this.state.value) };
    }
@@ -20,20 +20,15 @@ class App extends Component {
   render() {
     return (
       <section className="App row">
-      <div className="input col-md-6">
-      <h3>Input</h3>
-      <textarea
-        onChange={this.handleChange}
-        ref="textarea"
-        defaultValue={this.state.value} />
-      </div>
-      <div className="output col-md-6">
-      <h3>Output</h3>
-      <div
-        className="content"
-        dangerouslySetInnerHTML={this.getRawMarkup()}
-      />
-      </div>
+      <div className='col-md-6'>
+      <h1>Markdown Editor</h1>
+       <textarea className='form-control' ref="textarea" onChange={this.handleChange} defaultValue={this.state.value} />
+        </div>
+        <div className='col-md-6'>
+          <h1>Output</h1>
+           <div className='output' dangerouslySetInnerHTML= {this.spitOut()}>
+           </div>
+       </div>
       </section>
     );
   }

@@ -1,15 +1,21 @@
 body{
-  margin: 0 auto;
-  max-width: 50em;
-}
-.App{
-  margin: 2em;
-  background: #efefef;
+  margin: 5em auto;
+  max-width:70em;
 }
 textarea{
-  width: 20em;
-  height: 30em;
+  resize: vertical;
+  height: 70%;
+  width: 100%;
 }
-h3{
-
+.userArea{
+  display:flex;
+  justify-content:center;
+  flex-flow:row wrap;
+  height:100vh;
+}
+.output{
+  background-color:#efefef;
+  padding-left:3px;
+  border-top:1px solid #61DAFB;
+  border-radius: 10px;
 }
