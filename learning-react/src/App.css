@@ -6,6 +6,7 @@ textarea{
   resize: vertical;
   height: 70%;
   width: 100%;
+  margin-bottom:8em;
 }
 .userArea{
   display:flex;
@@ -14,8 +15,13 @@ textarea{
   height:100vh;
 }
 .output{
+  resize: vertical;
+  width: 100%;
   background-color:#efefef;
   padding-left:3px;
   border-top:1px solid #61DAFB;
   border-radius: 10px;
+}
+.col-sm-6{
+
 }

@@ -20,11 +20,11 @@ class App extends Component {
   render() {
     return (
       <section className="App row">
-      <div className='col-md-6'>
+      <div className='col-sm-6'>
       <h1>Markdown Editor</h1>
        <textarea className='form-control' ref="textarea" onChange={this.handleChange} defaultValue={this.state.value} />
         </div>
-        <div className='col-md-6'>
+        <div className='col-sm-6'>
           <h1>Output</h1>
            <div className='output' dangerouslySetInnerHTML= {this.spitOut()}>
            </div>
